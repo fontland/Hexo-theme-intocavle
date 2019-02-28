@@ -3,4 +3,4 @@ A custom theme for Hexo
 
 
 ## Installation
-$ git clone https://github.com/ahonn/Hexo-theme-intocavle themes/intocavle
+$ git clone https://github.com/fontland/Hexo-theme-intocavle themes/intocavle
