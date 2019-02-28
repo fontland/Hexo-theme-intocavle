@@ -1,0 +1,14 @@
+<%- partial('_partial/head') %>
+<body>
+  <div id="container">
+  	<%- body %>
+  	<nav id="main-nav">
+      <a id="main-nav-toggle" class="nav-icon"></a>
+      <% for (var i in theme.menu){ %>
+        <a class="main-nav-link" href="<%- url_for(theme.menu[i]) %>"><%= i %></a>
+      <% } %>
+    </nav>
+  </div>
+  <%- link_to("/", theme.sitename, {id:"sticker"}) %>
+</body>
+</html>

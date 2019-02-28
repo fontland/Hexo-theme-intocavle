@@ -1,0 +1,13 @@
+<div class="sidepanel">
+	<div class="category-nav">
+		<h1><%= page.category %></h1>
+		<nav>
+			<% page.posts.each(function(post, i){ %>
+		    <%- partial('_partial/category-post', {post: post, index: true}) %>
+		  <% }) %>
+	  </nav>
+  </div>
+</div>
+<div class="mainpanel">
+	<%- image_tag(theme.categoryimg[page.category], {alt:"封面图片", id:"faceimg"}) %>
+</div>
