@@ -1,6 +1,8 @@
 <div class="sidepanel"></div>
 <div class="mainpanel">
-	<%- image_tag("/images/banner.jpg", {alt:"封面图片", id:"faceimg"}) %>
+	<% if(!!theme.coverimg){ %>
+		<%- image_tag(theme.coverimg, {alt:"封面图片", id:"coverimg"}) %>
+	<% } %>
 	<% if (site.categories.length){ %>
 	   <%- list_categories({show_count: theme.show_count}) %>
 	<% } %>

@@ -9,5 +9,7 @@
   </div>
 </div>
 <div class="mainpanel">
-	<%- image_tag(theme.categoryimg[page.category], {alt:"封面图片", id:"faceimg"}) %>
+	<% if(!!theme.categoryimg[page.category]){ %>
+		<%- image_tag(theme.categoryimg[page.category], {alt:"封面图片", id:"coverimg"}) %>
+	<% } %>	
 </div>
