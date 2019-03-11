@@ -9,6 +9,12 @@ mainnav-bg-default = #cc002e
 mainnav-bg-pink = rgba(220,0,45,.7)
 mainnav-bg-none = rgba(0,0,0,.3)
 
+// Media queries
+mq-mobile = "screen and (max-width: 479px)"
+mq-tablet = "screen and (min-width: 480px) and (max-width: 1024px)"
+mq-normal = "screen and (min-width: 1024px)"
+
+
 global-reset()
 a
   text-decoration none
@@ -18,15 +24,15 @@ a:link, a:visited, a:hover, a:active, a:focus
 
 /* BASIC STYLES*/
 body
-  background color-font
+  font-size 16px
 
 #sticker
   position fixed
   color color-gray
-  font bold 14px/20px "Times New Roman",Serif,sans-serif
-  padding 0 4px
+  font bold 0.875em/1.5 "Times New Roman",Serif,sans-serif
+  padding 0 0.4em
   left 34%
-  bottom 20px
+  bottom 1em
   background color-red
   border 1px solid color-gray
 
@@ -35,7 +41,7 @@ body
   color white
 
 #container
-  margin 10px auto
+  margin 0.625em auto
   width 100%
   position relative
   background white
@@ -43,77 +49,51 @@ body
 
 #main-nav
   position absolute
-  left 15px
-  top 15px
+  left 0.4em
+  top 0.4em
   a
     color color-gray
-    font-size 14px
+    font-size 0.875em
   a:hover
     color color-font
 
 .sidepanel
-  position absolute
-  right 64%
-  left 15px
-  top 15px
+  position relative
+  margin-top 2em
 
 .mainpanel
-  width 63%
-  min-height 540px
-  position relative
-  margin-left 37%
-  overflow hidden
-
+  margin-top 2em
   .main-wrap
-    padding 15px 15px 50px
+    padding 1em 1em 3em
 
   #coverimg
     width 100%
     margin-bottom -4px
 
   .category-list
-    position absolute
-    top 0
-    bottom 0
-    left 0
-    right 0
-
     li
-      display block
-      width 50%
-      height 25%
-      float left
-      opacity 0
-      background mainnav-bg-none
-      transform(rotateY(180deg))
-      transition(all, .8s, ease-in-out)
-
+      display inline-block
       a
         display block
         width 100%
         height 100%
-        color white
         text-indent 1em
-        font 48px/2 SimSun
-    
-    li:hover
-      opacity 1
-      background mainnav-bg-default
-      background mainnav-bg-pink
-      transform(rotateY(0deg))
+        font 2em/2 SimSun    
+      a:hover
+        color color-red
 
 /* BASIC STYLES*/
 
 /* CATEGORY */
 .category-nav
-  text-align right
+  text-align center
 
   h1
-    margin-bottom 40px
-    font 80px SimSun
+    margin-bottom 1em
+    font 2em SimSun
   #archive-caption
-    font-size 16px
-    line-height 40px
+    font-size 1em
+    line-height 2.5em
   nav 
     .postname
       display inline-block
@@ -135,7 +115,7 @@ body
         width 70px
         height 70px
         color white
-        font 14px SimSun
+        font 0.875em SimSun
         background catnav-bg             
       a:hover
         background none
@@ -149,37 +129,38 @@ body
       text-align right
       time
         color color-gray
-        font-size 12px
+        font-size 0.75em
         font-style italic
     .article-inner 
       header h1
-        font-size 18px
+        font-size 1.25em
       .article-entry
-        margin 40px 0
+        margin 2.5em 0
         line-height 2
         h1,h2,h3,h4,h5,h6
           font-weight bold
           line-height 2
           margin 1em 0
-        p
-          img
-            display block
+        img
+          display block
+          margin 1em 0
+
       footer
         .article-tag-list
           li
             display inline-block
-            margin-right 5px
+            margin-right 0.4em
             a
-              font-size 14px
+              font-size 0.875em
               font-style italic
               color color-gray
             a:hover
               color color-font
     nav
-      margin-top 20px
+      margin-top 1.25em
       a
         display block
-        font-size 14px
+        font-size 0.875em
         line-height 2
       a:hover
         color color-red
@@ -187,15 +168,15 @@ body
 
 /* ARCHIVE */
   .archives-wrap
-    margin-bottom 20px
+    margin-bottom 1.25em
 
     .archive-year-wrap
       a
-        font italic 20px/2 SimSun
+        font italic 1.25em/2 SimSun
         color color-red
     .archives
       a
-        font-size 14px
+        font-size 0.875em
         line-height 2
       a:hover
         color color-red
@@ -203,15 +184,92 @@ body
 
 /* PAGINATION */
 #page-nav
-  margin-top 50px
+  margin-top 3em
   .page-number
   .extend
     font-style italic
-    font-size 14px
+    font-size 0.875em
     color color-gray
-    margin-right 10px
+    margin-right 0.75em
   .current
   a:hover
     color color-red
 /* PAGINATION */
+
+@media mq-normal
+  body
+    background color-font
+
+  #sticker
+    position fixed
+    color color-gray
+    font bold 0.875em/1.5 "Times New Roman",Serif,sans-serif
+    padding 0 0.4em
+    left 34%
+    bottom 1em
+    background color-red
+    border 1px solid color-gray
+
+  .sidepanel
+    position absolute
+    right 64%
+    left 1em
+    top 1em
+    margin-top 0
+
+    .category-nav
+      text-align right
+
+      h1
+        margin-bottom 1em
+        font 5em SimSun
+
+  .mainpanel
+    width 63%
+    min-height 540px
+    position relative
+    margin-left 37%
+    overflow hidden
+    margin-top 0
+    
+    .category-list
+      position absolute
+      top 0
+      bottom 0
+      left 0
+      right 0
+
+      li
+        display block
+        width 50%
+        height 25%
+        float left
+        opacity 0
+        background mainnav-bg-none
+        transform(rotateY(180deg))
+        transition(all, .8s, ease-in-out)
+
+        a
+          display block
+          width 100%
+          height 100%
+          color white
+          text-indent 1em
+          font 3em/2 SimSun
+      
+      li:hover
+        opacity 1
+        background mainnav-bg-default
+        background mainnav-bg-pink
+        transform(rotateY(0deg))
+  
+  #main-nav
+    left 1em
+    top 1em
+
+@media mq-mobile
+  .article-entry
+    img
+      width 100% !important
+
 
