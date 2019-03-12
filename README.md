@@ -18,7 +18,9 @@ $ git clone https://github.com/fontland/Hexo-theme-intocavle themes/intocavle
 读者可以通过每个页面左上角的存档链接访问全部历史文章的列表，即便这篇文章没有配置category。
 
 首页封面图片默认为source/images路径下的cover.jpg,可以在theme/_config.yml的coverimg项进行修改。
+
 各个category的封面图片应存放在source/images/categories下，在theme/_config.yml的categoryimg可以添加categoryname：category_coverimg这样的键值对来配置，例如：
+
 categoryimg:
   人: /images/categories/f11f3a292df5e0fe282658245f6034a85edf72dd.jpg
   梦: /images/categories/P1180011.JPG
