@@ -22,8 +22,11 @@ $ git clone https://github.com/fontland/Hexo-theme-intocavle themes/intocavle
 各个category的封面图片应存放在source/images/categories下，在theme/_config.yml的categoryimg可以添加categoryname：category_coverimg这样的键值对来配置，例如：
 
 categoryimg:
+
   人: /images/categories/f11f3a292df5e0fe282658245f6034a85edf72dd.jpg
+
   梦: /images/categories/P1180011.JPG
+
   思: /images/categories/IMGP3079x.jpg
 
 上线的文章也要有自己的题图，只能使用jpg格式，题图名字与文章名相同，保存在source/images/下。
