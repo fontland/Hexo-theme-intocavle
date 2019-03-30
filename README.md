@@ -32,4 +32,4 @@ categoryimg:
 上线的文章也要有自己的题图，只能使用jpg格式，题图名字与文章名相同，保存在source/images/下。
 
 
-预览效果：fanjun.name
+预览效果：https://fanjun.name
