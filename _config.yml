@@ -8,17 +8,14 @@ categoryimg:
   梦: /images/categories/P1180011.JPG
   思: /images/categories/IMGP3079x.jpg
   回忆: /images/categories/P1040600.jpg
+  纹章: /images/categories/Nord-Tifosi_2018-1024x683.jpg
 coverimg: /images/cover.jpg
   
 # Miscellaneous
 favicon: /favicon.png
 sitename: fanjun.name
 
-# search
-local_search:
-  enable: true
-  # if auto, trigger search by changing input
-  # if manual, trigger search by pressing enter key or search button
-  trigger: auto
-  # show top n results per article, show all results by setting to -1
-  top_n_per_article: 1
+#Valine
+valine: true
+v_appId: Bos1CI2DxVm7dWTz4jMielJa-gzGzoHsz
+v_appKey: 8uiwUjptLPmW3mApTFrDlYjj
